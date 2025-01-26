@@ -1,0 +1,104 @@
+body {
+    width: 100%;
+    max-width: 1366px;
+    min-width: 360px;
+
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.conBox{
+    background-color: var(--b5);
+    padding: 24px;
+    flex: 1;
+    overflow-Y: auto;
+    @include scroll;
+    height: calc(100vh - 144px);
+
+    .userSec{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        background-color: var(--b6);
+        box-shadow: 1px 1px 6px #00000020;
+        padding: 16px;
+        border-radius: 12px;
+
+        .proImg{
+            width: 36px;
+            height: 42px;
+            padding: 6px;
+            border-radius: 6px;
+            background-color: var(--b3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            &::before{
+                content: "\f007";
+                font-family: "FAS";
+                font-size: 24px;
+                color: var(--b6);
+                text-align: center;
+            }
+        }
+
+        .profile{
+            width: 100%;
+            display: grid;
+
+            span{
+                font-weight: 500;
+                display: inline-flex;
+                gap: 4px;
+                margin-bottom: 8px;
+                p{
+                    color: var(--b2);
+                }
+            }
+
+            bl{
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .manageList{
+        margin-top: 36px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        li{
+            background-color: var(--b6);
+            box-shadow: 1px 1px 6px #00000020;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+
+            .title{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                svg{
+                    color: var(--m0);
+                    margin-right: 8px;
+                    font-size: 24px;
+                    width: 24px;
+                }
+                span{
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+

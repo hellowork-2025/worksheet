@@ -1,0 +1,16 @@
+.submit{
+    border-top: 1px solid var(--b4);
+    background-color: var(--b5);
+    padding: 16px 24px;
+    height: 88px;
+
+    button{
+        background: var(--btn4);
+        color: var(--m2);
+        width: 100%;
+        height: 56px;
+        padding: 16px;
+        border-radius: 12px;
+        font-weight: 500;
+    }
+}
