@@ -1244,7 +1244,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
   background-color: var(--b6);
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1254901961);
   border-radius: 12px;
@@ -1253,7 +1252,7 @@ body {
   width: 100%;
   display: flex;
   gap: 12px;
-  padding: 16px 16px 0;
+  padding: 16px;
 }
 .conBox .userSec .top .user {
   display: flex;
@@ -1634,7 +1633,7 @@ body {
 .innerTabMenu {
   height: 48px;
   overflow-y: visible;
-  padding-left: 8px;
+  padding: 0 8px;
   position: relative;
   background: var(--b5);
 }
@@ -1670,18 +1669,6 @@ body {
   margin-top: 16px;
   width: 100%;
 }
-.innerTabMenu ul::before {
-  content: "";
-  display: block;
-  width: 50%;
-  height: 2px;
-  background: var(--m0);
-  border-radius: 0 10px 10px 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-}
 .innerTabMenu ul li {
   position: relative;
   z-index: 2;
@@ -1715,6 +1702,18 @@ body {
 .innerTabMenu ul li.active-a a {
   background-color: transparent;
   color: var(--m0);
+}
+.innerTabMenu ul li.active-a::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--m0);
+  border-radius: 0 10px 10px 0;
+  position: absolute;
+  top: 186%;
+  left: 0;
+  z-index: 2;
 }
 .innerTabMenu ul li.active-a::after {
   background-color: var(--m0);
