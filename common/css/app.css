@@ -363,7 +363,7 @@ span.select2-selection__rendered {
   text-overflow: ellipsis;
 }
 .inputBox input:focus {
-  border: 1px solid var(--m1);
+  border: 1px solid var(--m0);
 }
 .inputBox input:-moz-read-only {
   background-color: var(--b5) !important;
