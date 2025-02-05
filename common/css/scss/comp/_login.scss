@@ -1,0 +1,53 @@
+.mainLogin{
+    background-color: var(--b5);
+    padding: 24px;
+    height: 100vh;
+
+    .masterLogin{
+        margin-top: 56px;
+        margin-bottom: 108px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+
+        span{
+            background-color: var(--m3);
+            border-radius: 20px;
+            color: var(--m0);
+            width: 140px;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+
+            &::before{
+                content: "\f021";
+                font-family: "FAS";
+            }
+        }
+    }
+    
+    .logoSec{
+        width: 100%;
+        background-color: var(--b4);
+        padding: 28px 16px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--b2);
+
+        margin-bottom: 76px;
+    }
+
+    .loginInput{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+}
