@@ -23,6 +23,11 @@
         a{color: #333;}
         
         input {width: 90%;}
+        .status-1 { background-color: lightblue; }  /* 완료 */
+        .status-2 { background-color: yellow; }     /* 수정 */
+        .status-3 { background-color: lightgreen; } /* 추가 */
+        .status-4 { background-color: lightcoral; } /* 제작중 */
+
     </style>
 </head>
 
@@ -52,7 +57,7 @@
                 <td><a href="/M10a00.html" target="_blank">M10a00.html</td>
                 <td>2025-02-08</td>
                 <td>김소희</td>
-                <td>제작중</td>
+                <td class="status-4">제작중</td>
                 <td><input type="number" min="1" max="4" placeholder="1~4 입력"></td>
             </tr>
             <tr>
@@ -63,7 +68,7 @@
                 <td><a href="/M30a00.html" target="_blank">M30a00.html</td>
                 <td>2025-02-08</td>
                 <td>김소희</td>
-                <td>제작중</td>
+                <td class="status-4">제작중</td>
                 <td><input type="number" min="1" max="4" placeholder="1~4 입력"></td>
             </tr>
             <tr>
@@ -74,7 +79,7 @@
                 <td><a href="/M30b00.html" target="_blank">M30b00.html</td>
                 <td>2025-02-08</td>
                 <td>송상희</td>
-                <td>제작중</td>
+                <td class="status-4">제작중</td>
                 <td><input type="number" min="1" max="4" placeholder="1~4 입력"></td>
             </tr>
             <tr>
@@ -85,7 +90,7 @@
                 <td><a href="/M30e00.html" target="_blank">M30e00.html</td>
                 <td>2025-02-08</td>
                 <td>김소희</td>
-                <td>제작중</td>
+                <td class="status-4">제작중</td>
                 <td><input type="number" min="1" max="4" placeholder="1~4 입력"></td>
             </tr>
             <tr>
@@ -96,7 +101,7 @@
                 <td><a href="/M30f00.html" target="_blank">M30f00.html</td>
                 <td>2025-02-08</td>
                 <td>김소희</td>
-                <td>제작중</td>
+                <td class="status-4">제작중</td>
                 <td><input type="number" min="1" max="4" placeholder="1~4 입력"></td>
             </tr>
         </tbody>
@@ -110,6 +115,13 @@
             4: "제작중"
         };
 
+        const statusClassMap = {
+            1: "status-1", // 완료 (파란색)
+            2: "status-2", // 수정 (노란색)
+            3: "status-3", // 추가 (연두색)
+            4: "status-4"  // 제작중 (빨간색)
+        };
+
         function updateRowNumbers() {
             const rows = document.querySelectorAll("#worksheetTable tbody tr");
             rows.forEach((row, index) => {
@@ -120,13 +132,17 @@
         function setupStatusChange() {
             const rows = document.querySelectorAll("#worksheetTable tbody tr");
             rows.forEach(row => {
-                const statusCell = row.cells[5];
-                const inputField = row.cells[6].querySelector("input");
+                const statusCell = row.cells[7]; // 상태값이 들어갈 칸
+                const inputField = row.cells[8].querySelector("input"); // 상태 변경 input
 
                 inputField.addEventListener("change", function () {
                     const value = parseInt(this.value);
                     if (statusMap[value]) {
-                        statusCell.textContent = statusMap[value];
+                        statusCell.textContent = statusMap[value]; // 상태 변경
+
+                        // 기존 클래스 제거 후 새로운 클래스 추가
+                        statusCell.className = "";
+                        statusCell.classList.add(statusClassMap[value]);
                     } else {
                         alert("1~4 사이의 숫자를 입력하세요.");
                     }
@@ -144,9 +160,7 @@
             setupStatusChange();
         });
 
-        observer.observe(document.querySelector("#worksheetTable tbody"), {
-            childList: true
-        });
+        observer.observe(document.querySelector("#worksheetTable tbody"), { childList: true });
     </script>
 
 </body>
