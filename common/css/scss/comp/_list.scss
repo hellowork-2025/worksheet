@@ -1,0 +1,33 @@
+.manageList{
+    margin-top: 36px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    li{
+        background-color: var(--b6);
+        box-shadow: 1px 1px 6px #00000020;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px;
+
+        .title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            svg{
+                color: var(--m0);
+                margin-right: 8px;
+                font-size: 24px;
+                width: 24px;
+            }
+            span{
+                font-weight: 600;
+            }
+        }
+    }
+}

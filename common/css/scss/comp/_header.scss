@@ -17,3 +17,23 @@ header{
         color: var(--b1);
     }
 }
+//250208 추가 : 관리자용 헤더를 따로 만들었어요! 해당 클래스 써주세요!
+.masterhead{
+    width: 100%;
+    height: 56px;
+    padding: 12px 24px;
+    font-size: 24px;
+    background: var(--b4);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h3{
+        color: var(--b1);
+        font-weight: 700;
+    }
+    svg{
+        color: var(--b1);
+    }
+}

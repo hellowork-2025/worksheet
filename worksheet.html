@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worksheet</title>
+    <style>
+        table {width: 100%; border-collapse: collapse;}
+
+        th,td {border-top: 1px solid #5f64b8; border-bottom: 1px solid #5f64b8; border-right: 1px solid #5f64b8; padding: 4px; text-align: center;}
+
+        td:nth-child(2){text-align: left;}
+        td:nth-child(5){text-align: left;}
+
+        th,td:last-child {border-right: unset;}
+
+        th {background-color: #d7d9fc; border-right: 1px solid #5f64b8;}
+        th:last-child{border-right: unset;}
+
+        tbody tr:hover {background-color: #ecedfe; transition: .3s;}
+
+        a{color: #333;}
+        
+        input {width: 90%;}
+    </style>
+</head>
+
+<body>
+    <h2>근태관리어플 리스트 관리⌚🔨✨</h2>
+    <table id="worksheetTable">
+        <thead>
+            <tr>
+                <th style="width: 50px;">No.</ths>
+                <th>화면명</th>
+                <th style="width: 140px;">자원번호</th>
+                <th style="width: 140px;">화면형태</th>
+                <th>화면보기</th>
+                <th style="width: 140px;">작성일자</th>
+                <th style="width: 140px;">작성자</th>
+                <th style="width: 140px;">상태</th>
+                <th style="width: 140px;">상태 변경</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- tr태그 복사해서 사용해주시면 됩니다! -->
+            <tr>
+                <td></td>
+                <td>로그인 페이지</td>
+                <td>M10a00</td>
+                <td>page</td>
+                <td><a href="/M10a00.html" target="_blank">M10a00.html</td>
+                <td>2025-02-08</td>
+                <td>김소희</td>
+                <td>제작중</td>
+                <td><input type="number" min="1" max="4" placeholder="1~4 입력"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>관리 메인</td>
+                <td>M30a00</td>
+                <td>page</td>
+                <td><a href="/M30a00.html" target="_blank">M30a00.html</td>
+                <td>2025-02-08</td>
+                <td>김소희</td>
+                <td>제작중</td>
+                <td><input type="number" min="1" max="4" placeholder="1~4 입력"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>관리 메인</td>
+                <td>M30b00</td>
+                <td>modal</td>
+                <td><a href="/M30b00.html" target="_blank">M30b00.html</td>
+                <td>2025-02-08</td>
+                <td>송상희</td>
+                <td>제작중</td>
+                <td><input type="number" min="1" max="4" placeholder="1~4 입력"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>직원 관리</td>
+                <td>M30e00</td>
+                <td>page</td>
+                <td><a href="/M30e00.html" target="_blank">M30e00.html</td>
+                <td>2025-02-08</td>
+                <td>김소희</td>
+                <td>제작중</td>
+                <td><input type="number" min="1" max="4" placeholder="1~4 입력"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>휴가 관리</td>
+                <td>M30f00</td>
+                <td>page</td>
+                <td><a href="/M30f00.html" target="_blank">M30f00.html</td>
+                <td>2025-02-08</td>
+                <td>김소희</td>
+                <td>제작중</td>
+                <td><input type="number" min="1" max="4" placeholder="1~4 입력"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        const statusMap = {
+            1: "완료",
+            2: "수정",
+            3: "추가",
+            4: "제작중"
+        };
+
+        function updateRowNumbers() {
+            const rows = document.querySelectorAll("#worksheetTable tbody tr");
+            rows.forEach((row, index) => {
+                row.cells[0].textContent = index + 1; // 첫 번째 <td>에 번호 자동 입력
+            });
+        }
+
+        function setupStatusChange() {
+            const rows = document.querySelectorAll("#worksheetTable tbody tr");
+            rows.forEach(row => {
+                const statusCell = row.cells[5];
+                const inputField = row.cells[6].querySelector("input");
+
+                inputField.addEventListener("change", function () {
+                    const value = parseInt(this.value);
+                    if (statusMap[value]) {
+                        statusCell.textContent = statusMap[value];
+                    } else {
+                        alert("1~4 사이의 숫자를 입력하세요.");
+                    }
+                });
+            });
+        }
+
+        // 초기 실행
+        updateRowNumbers();
+        setupStatusChange();
+
+        // 새로운 행이 추가될 때마다 자동 업데이트
+        const observer = new MutationObserver(() => {
+            updateRowNumbers();
+            setupStatusChange();
+        });
+
+        observer.observe(document.querySelector("#worksheetTable tbody"), {
+            childList: true
+        });
+    </script>
+
+</body>
+
+</html>
