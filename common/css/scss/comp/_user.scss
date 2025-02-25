@@ -21,7 +21,10 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            width: calc(100%/2);
+
+            //250225 수정(410px부터 profile의 글자가 밑으로 내려오는 오류 수정)
+            // width: calc(100%/2);
+            width: 70%;
             .proImg{
                 width: 36px;
                 height: 42px;
@@ -67,7 +70,9 @@
 
         //250129추가
         .state{
-            width: calc(100%/2);
+            //250225 수정(410px부터 profile의 글자가 밑으로 내려오는 오류 수정)
+            // width: calc(100%/2);
+            width: 30%;
             display: flex;
             gap: 12px;
             align-items: center;
@@ -118,6 +123,10 @@
         }
     }
 
+
+    & + .manageList{
+        margin-top: 36px;
+    }
 }
 
 .workerList{

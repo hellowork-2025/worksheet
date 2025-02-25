@@ -9,8 +9,11 @@ header{
     align-items: center;
     justify-content: space-between;
 
+    //250225 수정: 헤더 타이틀 폰트 크기가 정해져있는 거 같아 추가해뒀습니다
     h3{
         color: var(--m0);
+        font-size: 18px;
+        line-height: 28px;
         font-weight: 700;
     }
     svg{
