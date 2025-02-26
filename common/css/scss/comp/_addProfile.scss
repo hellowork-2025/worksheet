@@ -1,0 +1,43 @@
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px 24px 24px;
+
+    .photo {
+        width: 72px;
+        height: 92px;
+        background: var(--b3);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            color: var(--b6);
+            font-size: 32px;
+        }
+    }
+
+    .addPhoto {
+        width: 32px;
+        height: 32px;
+        border-radius: 50px;
+        background: var(--m3);
+        position: absolute;
+        top: 24%;
+        left: 54%;
+
+        &::before {
+            content: "\f030";
+            font-family: "FAS";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--m2);
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+    }
+}
