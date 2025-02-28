@@ -4,6 +4,7 @@
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 900;
 
   .modal{
     position: absolute;
@@ -19,7 +20,8 @@
       font-size: 18px;
       font-weight: 700;
       line-height: 27px;
-      padding: 20px 0; //250129 수정
+      // padding: 20px 0; //250129 수정
+      padding-bottom: 20px; //250228 수정
       text-align: center;
     }
     &-content{
@@ -32,6 +34,20 @@
         }
       }
       .inputBox{
+        width: 100%;
+        flex-direction: column;
+        
+        label{
+          display: block;
+          width: 100%;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 21px;
+          text-align: left;
+          color: var(--b2);
+        }
+      }
+      .textareaBox{
         width: 100%;
         flex-direction: column;
   

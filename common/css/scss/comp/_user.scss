@@ -47,7 +47,8 @@
             .profile{
                 width: 100%;
                 display: grid;
-    
+                padding: 0;
+                justify-content: flex-start;
                 span{
                     font-weight: 500;
                     display: inline-flex;

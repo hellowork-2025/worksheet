@@ -652,7 +652,11 @@ span.select2-selection__rendered {
 }
 
 .textareaBox textarea {
-  padding-left: 28px !important;
+  width: 100%;
+  min-height: 120px;
+  padding: 8px 12px;
+  border: 1px solid #D6D9DF;
+  border-radius: 8px;
 }
 .textareaBox textarea::-webkit-scrollbar {
   width: 12px;
@@ -1247,6 +1251,7 @@ input[type=datetime-local]:disabled {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 900;
 }
 .modalBox .modal {
   position: absolute;
@@ -1263,7 +1268,7 @@ input[type=datetime-local]:disabled {
   font-size: 18px;
   font-weight: 700;
   line-height: 27px;
-  padding: 20px 0;
+  padding-bottom: 20px;
   text-align: center;
 }
 .modalBox .modal-content {
@@ -1279,6 +1284,19 @@ input[type=datetime-local]:disabled {
   flex-direction: column;
 }
 .modalBox .modal-content .inputBox label {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  color: var(--b2);
+}
+.modalBox .modal-content .textareaBox {
+  width: 100%;
+  flex-direction: column;
+}
+.modalBox .modal-content .textareaBox label {
   display: block;
   width: 100%;
   font-size: 14px;
@@ -1725,6 +1743,8 @@ body {
 .userSec .top .user .profile {
   width: 100%;
   display: grid;
+  padding: 0;
+  justify-content: flex-start;
 }
 .userSec .top .user .profile span {
   font-weight: 500;
@@ -1795,4 +1815,4 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
+}/*# sourceMappingURL=app.css.map */

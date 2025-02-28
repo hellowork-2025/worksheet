@@ -342,7 +342,12 @@ span.select2-selection__rendered{
 .textareaBox {
 
     textarea {
-        padding-left: 28px !important;
+        width: 100%;
+        min-height: 120px;
+        // padding-left: 28px !important;
+        padding: 8px 12px;
+        border: 1px solid #D6D9DF;
+        border-radius: 8px;
         @include scroll();
     }
 
