@@ -4,7 +4,7 @@
     height: 100vh;
 
     .masterLogin{
-        margin-top: 56px;
+        margin-top: 32px;
         margin-bottom: 108px;
 
         display: flex;
@@ -40,7 +40,13 @@
         font-weight: 700;
         color: var(--b2);
 
-        margin-bottom: 76px;
+        //0303 logoSec 아래 오늘 div에 따른 마진 값 변경
+        & + .loginInput{
+            margin-top: 76px;
+        }
+        & + .loginError{
+            margin-top: 40px;
+        }
     }
 
     .loginInput{
@@ -49,5 +55,23 @@
         flex-direction: column;
         gap: 8px;
         margin-bottom: 20px;
+    }
+
+    //0303 직원로그인 화면의 글자 추가
+    .loginError{
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        span{
+            padding-left: 4px;
+            color: #70747C;
+        }
+
+    }
+
+    .autoEnter{
+        margin-bottom: 8px;
     }
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>관리자 로그인</title>
+    <title>직원 로그인</title>
 
     <script src="/common/js/include.js"></script>
     <script src="/common/js/common.js"></script>
@@ -13,20 +13,23 @@
 <body>
     <div class="mainLogin">
         <div class="masterLogin">
-            <span>관리자 로그인</span>
+            <span>직원 로그인</span>
         </div>
 
         <div class="logoSec">
             LOGO
         </div>
 
+        <div class="loginError">
+            <i class="fa-solid fa-circle-exclamation" style="color:#F35A39;"></i>
+            <span>ID와 PW를 입력하세요</span>
+        </div>
         <div class="loginInput">
             <div class="inputBox">
                 <input type="text" placeholder="ID">
             </div>
             <div class="inputBox">
                 <input type="password" placeholder="PW">
-                <!-- 0303 비밀번호 보이기 onclick fuction 추가 -->
                 <div class="pwToggleIcon" onclick="pwToggle(this)"></div>
             </div>
         </div>

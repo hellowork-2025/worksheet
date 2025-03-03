@@ -205,6 +205,11 @@ span.select2-selection__rendered{
         right: 12px;
         top: 12px;
         cursor: pointer;
+        
+        //0303 비밀번호 글자로 보일 때 아이콘 추가
+        &.show{
+            background-image: url(/common/images/icon/pw_icon--hide.svg);
+        }
     }
 
     .gps{
