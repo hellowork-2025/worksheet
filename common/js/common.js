@@ -852,7 +852,22 @@ $(document).ready(function () {
             }
         })
     })
+
+    
 });
 
+//비밀번호 토글
+function pwToggle(param){
+    $el = $(param)
+    $elPW = $el.prev('input')
+    
+    if($el.hasClass('show')){
+        $el.removeClass('show')
+        $elPW.prop('type','password')
+    }else{
+        $el.addClass('show')
+        $elPW.prop('type','text')
+    }
+}
 
 
