@@ -40,3 +40,26 @@ header{
         color: var(--b1);
     }
 }
+
+//250305 메인 헤더 추가
+.mainHead{
+    width: 100%;
+    height: 56px;
+    padding: 12px 24px;
+    font-size: 24px;
+    background: var(--b5);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h3{
+        color: var(--m0);
+        font-size: 26px;
+        line-height: 28px;
+        font-weight: 700;
+    }
+    svg{
+        color: var(--b1);
+    }
+}

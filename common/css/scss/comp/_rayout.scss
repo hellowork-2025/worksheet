@@ -16,6 +16,10 @@ body {
     overflow-Y: auto;
     @include scroll;
     height: calc(100vh - 144px);
+
+}
+.main{
+    padding: unset !important;
 }
 
 .full{

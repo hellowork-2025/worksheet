@@ -1,4 +1,4 @@
-.userSec{
+.userSec {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
     border-radius: 12px;
 
     //250129추가
-    .top{
+    .top {
         width: 100%;
         display: flex;
         gap: 12px;
@@ -17,7 +17,7 @@
         justify-content: space-between;
         align-items: center;
 
-        .user{
+        .user {
             display: flex;
             align-items: center;
             gap: 12px;
@@ -25,7 +25,8 @@
             //250225 수정(410px부터 profile의 글자가 밑으로 내려오는 오류 수정)
             // width: calc(100%/2);
             width: 70%;
-            .proImg{
+
+            .proImg {
                 width: 36px;
                 height: 42px;
                 padding: 6px;
@@ -34,8 +35,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                
-                &::before{
+
+                &::before {
                     content: "\f007";
                     font-family: "FAS";
                     font-size: 24px;
@@ -43,34 +44,36 @@
                     text-align: center;
                 }
             }
-    
-            .profile{
+
+            .profile {
                 width: 100%;
                 display: grid;
                 padding: 0;
                 justify-content: flex-start;
-                span{
+
+                span {
                     font-weight: 500;
                     display: inline-flex;
                     gap: 4px;
                     margin-bottom: 8px;
-                    p{
+
+                    p {
                         color: var(--b2);
                     }
                 }
-    
-                bl{
+
+                bl {
                     text-transform: uppercase;
                 }
 
-                .unset{
+                .unset {
                     margin-bottom: unset !important;
                 }
             }
         }
 
         //250129추가
-        .state{
+        .state {
             //250225 수정(410px부터 profile의 글자가 밑으로 내려오는 오류 수정)
             // width: calc(100%/2);
             width: 30%;
@@ -79,20 +82,21 @@
             align-items: center;
             justify-content: end;
 
-            .wait{
+            .wait {
                 background: var(--b3);
                 color: var(--b6);
                 padding: 4px 10px;
                 border-radius: 32px;
             }
 
-            .pass{
+            .pass {
                 background: var(--s1);
                 color: var(--b6);
                 padding: 4px 10px;
                 border-radius: 32px;
             }
-            .companion{
+
+            .companion {
                 background: var(--s2);
                 color: var(--b6);
                 padding: 4px 10px;
@@ -101,36 +105,39 @@
         }
 
     }
-    .bot{
+
+    .bot {
         width: 100%;
         display: flex;
         gap: 12px;
         border-top: 1px solid var(--b4);
         padding: 12px 16px;
 
-        .rezDate{
+        .rezDate {
             width: 100%;
             display: flex;
             align-items: center;
             gap: 6px;
             color: var(--b2);
-            span{
+
+            span {
                 color: var(--b1);
                 font-weight: 500;
             }
         }
-        .subDate{
+
+        .subDate {
             color: var(--b3);
         }
     }
 
 
-    & + .manageList{
+    &+.manageList {
         margin-top: 36px;
     }
 }
 
-.workerList{
+.workerList {
     display: flex;
     flex-direction: column;
     gap: 12px;

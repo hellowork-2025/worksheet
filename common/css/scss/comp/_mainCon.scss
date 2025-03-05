@@ -1,0 +1,272 @@
+#calendar-container {
+    text-align: center;
+    padding: 24px;
+    border-radius:12px;
+    background: var(--b6);
+    margin: 24px;
+
+    #calendar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+
+        #prev-month{
+            background: unset !important;
+            font-size: 20px;
+            margin-right: 44px;
+            color: var(--b2);
+            &:hover{
+                color: var(--m0);
+            }
+        }
+
+        #next-month{
+            background: unset !important;
+            font-size: 20px;
+            color: var(--b2);
+            &:hover{
+                color: var(--m0);
+            }
+        }
+    }
+
+    #toggle-view{
+        background: unset !important;
+        font-size: 20px;
+        color: var(--b2);
+        padding-top: 12px;
+    }
+    
+    #calendar {
+        display: block;
+        .ui-datepicker {
+            width: 100%;
+        }
+        .today-highlight .ui-state-highlight {
+            background: var(--m0) !important;
+            color: var(--b6) !important;
+        }
+        .ui-datepicker-header {
+            display: none !important;
+        }
+        .ui-widget-content {
+            border: unset !important;
+        }
+        .ui-datepicker {
+            padding: unset !important;
+            padding-top: unset !important;
+            font-family: unset !important;
+        }
+    }
+}
+
+
+//250305 추가
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--b3);
+    border-radius: 12px;
+    padding: 24px 0;
+    margin: 0 24px;
+
+    .workTotal{
+        display: flex;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+
+        h5,span{
+            color: var(--s1);
+            font-weight: 600;
+            font-size: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+        }
+        p{
+            color: var(--b3);
+        }
+    }
+
+    .line{
+        width: 2px;
+        height: 24px;
+        background: var(--b3);
+        margin: 0 12px;
+    }
+
+    .noneTotal{
+        display: flex;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        h5,span{
+            color: var(--s2);
+            font-weight: 600;
+            font-size: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+        }
+        p{
+            color: var(--b3);
+        }
+    }
+}
+
+.gauge{
+    background: var(--b4);
+    border-radius: 50px;
+    padding: 4px 12px;
+    color: var(--b6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px;
+    
+    & div{
+        background:var(--m0);
+        border-radius: 50px;
+    }
+}
+
+.mainList {
+    background: var(--b6);
+    width: 100%;
+    padding-top: 24px;
+    border-radius: 12px 12px 0 0;
+
+    .mainWorkerList {
+        gap: 18px;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid var(--b4);
+        padding: 24px;
+
+        .mainUserSec {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            background-color: var(--b5);
+            box-shadow: 1px 1px 6px #00000020;
+            border-radius: 12px;
+            .top {
+                width: 100%;
+                display: flex;
+                gap: 12px;
+                padding: 16px;
+                justify-content: space-between;
+                align-items: center;
+
+                .user {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+
+                    .proImg {
+                        width: 36px;
+                        height: 42px;
+                        padding: 6px;
+                        border-radius: 6px;
+                        background-color: var(--b3);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        &::before {
+                            content: "\f007";
+                            font-family: "FAS";
+                            font-size: 24px;
+                            color: var(--b6);
+                            text-align: center;
+                        }
+                    }
+
+                    .profile {
+                        width: 100%;
+                        display: grid;
+                        padding: 0;
+                        justify-content: flex-start;
+
+                        span {
+                            font-weight: 500;
+                            display: inline-flex;
+                            gap: 4px;
+                            margin-bottom: 8px;
+
+                            p {
+                                color: var(--b2);
+                            }
+                        }
+
+                        bl {
+                            text-transform: uppercase;
+                        }
+
+                        .unset {
+                            margin-bottom: unset !important;
+                        }
+                    }
+                }
+
+                .time {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    span {
+                        color: var(--b2);
+                        font-weight: 500;
+                        display: flex;
+                        gap: 12px;
+                        min-width: 85px;
+
+                        p {
+                            color: var(--b1);
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            .mainState {
+                //디폴트는 미출근
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: var(--b3);
+                color: var(--b6);
+                width: 80px;
+                height: 74px;
+                border-radius: 0 12px 12px 0;
+
+                //go to work = 출근
+                &.gtw{
+                    background: var(--s1);
+                }
+
+                //leave work = 퇴근
+                &.lw{
+                    background: var(--s2);
+                }
+
+                //vacation = 휴가
+                &.vac{
+                    background: var(--m0);
+                }
+            }
+
+            &+.manageList {
+                margin-top: 36px;
+            }
+        }
+    }
+}
