@@ -11,7 +11,10 @@
         font-weight: 500;
         line-height: 24px;
         .select2-selection__arrow {
-            top: 8px;right: 12px;
+            //250306 수정
+            top: 12px;
+            //250306 수정
+            right: 12px;
             width: 24px;
             height: 24px;
             &::before{
@@ -58,6 +61,10 @@
         padding: 0;
 
         .select2-search__field {
+            //250306 추가
+            display: none !important;
+            //250306 추가
+
             height: 40px;
             border: 1px solid var(--b4);
             border-radius: 8px;
@@ -78,7 +85,9 @@
     .select2-selection--single .select2-selection__rendered {
         font-weight: 500;
         font-size: 16px;
-        line-height: 24px;
+        //250306 수정
+        line-height: 30px;
+        //250306 수정
     }
 
     .select2-selection--single .select2-selection__arrow {

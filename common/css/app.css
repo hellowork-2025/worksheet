@@ -1292,6 +1292,7 @@ input[type=datetime-local]:disabled {
   border-radius: 12px;
   background: var(--b6);
   margin: 24px;
+  box-shadow: rgba(0, 0, 0, 0.125) 1px 2px 6px;
 }
 #calendar-container #calendar-header {
   display: flex;
@@ -1329,6 +1330,9 @@ input[type=datetime-local]:disabled {
 }
 #calendar-container #calendar .ui-datepicker {
   width: 100%;
+}
+#calendar-container #calendar .ui-datepicker th {
+  width: 14.2857142857%;
 }
 #calendar-container #calendar .today-highlight .ui-state-highlight {
   background: var(--m0) !important;
@@ -1409,7 +1413,7 @@ input[type=datetime-local]:disabled {
   margin: 24px;
 }
 .gauge div {
-  background: var(--m0);
+  background: var(--m0) !important;
   border-radius: 50px;
 }
 
@@ -1647,7 +1651,7 @@ body {
   line-height: 24px;
 }
 .select2-container .selection .select2-selection .select2-selection__arrow {
-  top: 8px;
+  top: 12px;
   right: 12px;
   width: 24px;
   height: 24px;
@@ -1696,6 +1700,7 @@ body {
   padding: 0;
 }
 .select2-container--default .select2-search--dropdown .select2-search__field {
+  display: none !important;
   height: 40px;
   border: 1px solid var(--b4);
   border-radius: 8px;
@@ -1711,7 +1716,7 @@ body {
 .select2-container--default .select2-selection--single .select2-selection__rendered {
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 30px;
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow {
   display: flex;

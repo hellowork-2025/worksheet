@@ -4,6 +4,7 @@
     border-radius:12px;
     background: var(--b6);
     margin: 24px;
+    box-shadow: rgba(0, 0, 0, 0.125) 1px 2px 6px;
 
     #calendar-header {
         display: flex;
@@ -44,6 +45,10 @@
         display: block;
         .ui-datepicker {
             width: 100%;
+
+            th{
+                width: calc(100% / 7);
+            }
         }
         .today-highlight .ui-state-highlight {
             background: var(--m0) !important;
@@ -132,7 +137,7 @@
     margin: 24px;
     
     & div{
-        background:var(--m0);
+        background:var(--m0) !important;
         border-radius: 50px;
     }
 }
