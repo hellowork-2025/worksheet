@@ -53,6 +53,7 @@
         .today-highlight .ui-state-highlight {
             background: var(--m0) !important;
             color: var(--b6) !important;
+            font-weight: 700;
         }
         .ui-datepicker-header {
             display: none !important;
@@ -65,6 +66,17 @@
             padding-top: unset !important;
             font-family: unset !important;
         }
+        .ui-datepicker-calendar{
+            thead{
+                th{
+                    span{
+                        font-size: 12px;
+                        font-weight: 500;
+                        color: #ABB0B9;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -76,7 +88,7 @@
     justify-content: space-between;
     border: 1px solid var(--b3);
     border-radius: 12px;
-    padding: 24px 0;
+    padding: 20px 0;
     margin: 0 24px;
 
     .workTotal{
@@ -88,7 +100,7 @@
         h5,span{
             color: var(--s1);
             font-weight: 600;
-            font-size: 20px;
+            font-size: 14px;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -114,7 +126,7 @@
         h5,span{
             color: var(--s2);
             font-weight: 600;
-            font-size: 20px;
+            font-size: 14px;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -167,7 +179,7 @@
                 width: 100%;
                 display: flex;
                 gap: 12px;
-                padding: 16px;
+                padding: 12px;
                 justify-content: space-between;
                 align-items: center;
 
@@ -249,8 +261,12 @@
                 justify-content: center;
                 background: var(--b3);
                 color: var(--b6);
-                width: 80px;
-                height: 74px;
+                font-size: 12px;
+                font-weight: 700;
+                text-align: center;
+                width: 45px;
+                height: 70px;
+                padding: 0 4px;
                 border-radius: 0 12px 12px 0;
 
                 //go to work = 출근

@@ -858,7 +858,8 @@ input[type='datetime-local'] {
         border-radius: 2px;
         transition: all .1s;
         position: relative;
-
+        font-size: 12px;
+        font-weight: 500;
         &.ui-state-highlight {
 
             &::after {

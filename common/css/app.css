@@ -218,7 +218,7 @@ b {
 }
 body {
   font-family: "PTD", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   color: var(--b1);
 }
@@ -323,6 +323,29 @@ body::-webkit-scrollbar-track {
   background-color: var(--btn1);
   color: var(--b6);
   transition: 0.3s;
+}
+
+.main #calendar-container {
+  margin-bottom: 12px;
+}
+.main .userSec {
+  width: calc(100% - 48px);
+  margin: 0 24px 24px;
+}
+.main .personalWorkerList + .mainWorkerList {
+  border-top: none;
+  padding-top: 0;
+}
+.main .personalWorkerList + .mainWorkerList::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #D6D9DF;
+}
+.submit-employee button {
+  background: var(--btn1) !important;
+  color: var(--b6) !important;
 }
 
 header {
@@ -1135,6 +1158,8 @@ input[type=datetime-local]:disabled {
   border-radius: 2px;
   transition: all 0.1s;
   position: relative;
+  font-size: 12px;
+  font-weight: 500;
 }
 .ui-datepicker .ui-state-default.ui-state-highlight::after {
   content: "";
@@ -1337,6 +1362,7 @@ input[type=datetime-local]:disabled {
 #calendar-container #calendar .today-highlight .ui-state-highlight {
   background: var(--m0) !important;
   color: var(--b6) !important;
+  font-weight: 700;
 }
 #calendar-container #calendar .ui-datepicker-header {
   display: none !important;
@@ -1349,6 +1375,11 @@ input[type=datetime-local]:disabled {
   padding-top: unset !important;
   font-family: unset !important;
 }
+#calendar-container #calendar .ui-datepicker-calendar thead th span {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ABB0B9;
+}
 
 .total {
   display: flex;
@@ -1356,7 +1387,7 @@ input[type=datetime-local]:disabled {
   justify-content: space-between;
   border: 1px solid var(--b3);
   border-radius: 12px;
-  padding: 24px 0;
+  padding: 20px 0;
   margin: 0 24px;
 }
 .total .workTotal {
@@ -1368,7 +1399,7 @@ input[type=datetime-local]:disabled {
 .total .workTotal h5, .total .workTotal span {
   color: var(--s1);
   font-weight: 600;
-  font-size: 20px;
+  font-size: 14px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1392,7 +1423,7 @@ input[type=datetime-local]:disabled {
 .total .noneTotal h5, .total .noneTotal span {
   color: var(--s2);
   font-weight: 600;
-  font-size: 20px;
+  font-size: 14px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1442,7 +1473,7 @@ input[type=datetime-local]:disabled {
   width: 100%;
   display: flex;
   gap: 12px;
-  padding: 16px;
+  padding: 12px;
   justify-content: space-between;
   align-items: center;
 }
@@ -1511,8 +1542,12 @@ input[type=datetime-local]:disabled {
   justify-content: center;
   background: var(--b3);
   color: var(--b6);
-  width: 80px;
-  height: 74px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  width: 45px;
+  height: 70px;
+  padding: 0 4px;
   border-radius: 0 12px 12px 0;
 }
 .mainList .mainWorkerList .mainUserSec .mainState.gtw {
@@ -1847,6 +1882,7 @@ body {
   height: 56px;
   padding: 16px;
   border-radius: 12px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -2104,4 +2140,4 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
+}/*# sourceMappingURL=app.css.map */
