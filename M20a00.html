@@ -35,7 +35,7 @@
             <button id="toggle-view"><i class="fa-solid fa-angle-down"></i></button>
         </div>
 
-        <div class="inputBox" style="margin: 24px;" >
+        <div class="inputBox" style="margin: 0 24px 24px;" >
             <select class="select">
                 <option value="">전체</option>
                 <option value="ABC사업부">ABC사업부</option>
@@ -60,10 +60,12 @@
                 </div>
             </div>
             <div class="gauge">
-                00/00 (00%)
-                <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="80" aria-valuemin="0"
-                    aria-valuemax="100"></div>
+                <span class="gauge-text">00/00 (00%)</span>
+                <div class="gauge-content">
+                    <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
             </div>
+            
 
             <div class="mainWorkerList">
                 <div class="mainUserSec">

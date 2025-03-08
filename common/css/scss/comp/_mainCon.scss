@@ -66,6 +66,24 @@
             padding-top: unset !important;
             font-family: unset !important;
         }
+        
+        //250308 추가
+        .ui-datepicker .ui-state-default.ui-state-highlight::after {
+            content: "";
+            display: none !important;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: var(--m1);
+            position: absolute;
+            top: 10%;
+            left: 10%;
+        }
+        .ui-datepicker .ui-state-default.ui-state-active {
+            background-color: var(--m3);
+        }
+        //250308 추가
+
         .ui-datepicker-calendar{
             thead{
                 th{
@@ -138,21 +156,35 @@
     }
 }
 
-.gauge{
+.gauge {
     background: var(--b4);
     border-radius: 50px;
-    padding: 4px 12px;
     color: var(--b6);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     margin: 24px;
-    
-    & div{
-        background:var(--m0) !important;
+    position: relative; 
+    min-width: 150px; 
+
+    .gauge-text{
+        position: absolute;
+        z-index: 10;
+    }
+    .gauge-content {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .progress-bar {
+        background: var(--m0) !important;
         border-radius: 50px;
+        height: 22px;
+        transition: width 0.3s ease-in-out;
     }
 }
+
 
 .mainList {
     background: var(--b6);

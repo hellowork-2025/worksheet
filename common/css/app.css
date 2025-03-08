@@ -1375,6 +1375,20 @@ input[type=datetime-local]:disabled {
   padding-top: unset !important;
   font-family: unset !important;
 }
+#calendar-container #calendar .ui-datepicker .ui-state-default.ui-state-highlight::after {
+  content: "";
+  display: none !important;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--m1);
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+#calendar-container #calendar .ui-datepicker .ui-state-default.ui-state-active {
+  background-color: var(--m3);
+}
 #calendar-container #calendar .ui-datepicker-calendar thead th span {
   font-size: 12px;
   font-weight: 500;
@@ -1436,16 +1450,29 @@ input[type=datetime-local]:disabled {
 .gauge {
   background: var(--b4);
   border-radius: 50px;
-  padding: 4px 12px;
   color: var(--b6);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 24px;
+  position: relative;
+  min-width: 150px;
 }
-.gauge div {
+.gauge .gauge-text {
+  position: absolute;
+  z-index: 10;
+}
+.gauge .gauge-content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.gauge .progress-bar {
   background: var(--m0) !important;
   border-radius: 50px;
+  height: 22px;
+  transition: width 0.3s ease-in-out;
 }
 
 .mainList {
@@ -2140,4 +2167,4 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-}/*# sourceMappingURL=app.css.map */
+}
