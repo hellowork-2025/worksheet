@@ -32,3 +32,106 @@
         color: var(--b6) !important;
     }
 }
+
+.vacationHeader{
+    font-size: 18px;
+    font-weight: 700;
+    .title{
+        &::after{
+            content: "";
+            display: inline-block;
+            width: 2px;
+            height: 12px;
+            margin: 0 12px;
+            border-radius: 2px;
+            background-color: var(--b4);
+        }
+    }
+    .num{
+        color: var(--m0);
+    }
+}
+.vacationList{
+    .current{
+        margin-bottom: 20px;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--b4);
+    }
+    .vacationSec{
+        & + .vacationSec{
+            margin-top: 16px;
+        }
+
+        & > .top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            padding: 0 4px;
+
+            .state{
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 22px;
+                color: var(--b2);
+                
+                .stateBtn{
+                    margin-left: 8px;
+                    padding: 4px 10px;
+                    font-size: 12px;
+                    font-weight: 600;
+                    line-height: 22px;
+                    border-radius: 11px;
+                    color: #fff;
+
+                    &.wait{
+                        background-color: #999999;
+                    }
+                    &.pass{
+                        background-color: var(--s1);
+                    }
+                    &.companion{
+                        background-color: var(--s2);
+                    }
+                }
+            }
+
+            .date{
+                font-size: 12px;
+                line-height: 22px;
+                font-weight: 500;
+                color: var(--b3);
+            }
+        }
+
+        .userSec{
+            .cancleBtn{
+                padding: 4px 8px;
+                background-color: var(--b3);
+                border-radius: 8px;
+                color: #fff;
+                line-height: 150%;
+            }
+        }
+    }
+}
+
+.modal-conBox{
+    &.right{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 12px;
+        text-align: right;
+
+        .leftDate{
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+            color: var(--b2);
+            .date{
+                color: var(--b1);
+            }
+        }
+    }
+}

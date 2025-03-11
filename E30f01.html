@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 휴가 관리</title>
+
+    <script src="/common/js/include.js"></script>
+    <script src="/common/js/common.js"></script>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header class="masterhead">
+        <i class="fa-solid fa-angle-left"></i>
+        <h3>내 휴가 관리</h3>
+        <i class="fa-solid fa-xmark"></i>
+    </header>
+    <!-- 헤더 -->
+
+    <!-- 컨텐츠 영역 -->
+    <div class="conBox">
+        <div class="vacationHeader">
+            <span class="title">남은 휴가 일수</span> <span class="num">10.5</span>
+        </div>
+        <div class="workerList vacationList">
+            <div class="current">
+                <div class="vacationSec">
+                    <div class="top">
+                        <div class="state">
+                            <span>상태</span>
+                            <span class="stateBtn wait">대기</span>
+                        </div>
+                        <p class="date">2025.02.02</p>
+                    </div>
+                
+                    <div class="userSec">
+                        <div class="top">
+                            <div class="user">
+                                <div class="profile">
+                                    <span class="unset">
+                                        연차
+                                        <p class="date">2025.02.14(종일)</p>
+                                    </span>
+                                </div>
+                            </div>
+                            <button class="cancleBtn">신청취소</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hisory">
+                <div class="vacationSec">
+                    <div class="top">
+                        <div class="state">
+                            <span>상태</span>
+                            <span class="stateBtn pass">승인</span>
+                        </div>
+                        <p class="date">2025.02.02</p>
+                    </div>
+                
+                    <div class="userSec">
+                        <div class="top">
+                            <div class="user">
+                                <div class="profile">
+                                    <span class="unset">
+                                        연차
+                                        <p class="date">2025.02.14(종일)</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vacationSec">
+                    <div class="top">
+                        <div class="state">
+                            <span>상태</span>
+                            <span class="stateBtn pass">승인</span>
+                        </div>
+                        <p class="date">2025.02.02</p>
+                    </div>
+                
+                    <div class="userSec">
+                        <div class="top">
+                            <div class="user">
+                                <div class="profile">
+                                    <span class="unset">
+                                        연차
+                                        <p class="date">2025.02.14(종일)</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 컨텐츠 영역 -->
+
+    
+    <!-- 모달 영역 -->
+    <div class="modalBox">
+        <div class="modal">
+            <div class="modal-title">
+                <span>휴가 신청</span>
+            </div>
+            <div class="modal-content">
+                <div class="modal-conBox flex">
+                    <div class="inputBox" >
+                        <label>휴가 일자</label>
+                        <select class="select">
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                        </select>
+                    </div>
+                    <div class="inputBox" >
+                        <label class="hidden">달</label>
+                        <select class="select">
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+                    <div class="inputBox" >
+                        <label class="hidden">일</label>
+                        <select class="select">
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-conBox flex mt8">
+                    <div class="inputBox">
+                        <label>휴가 형태</label>
+                        <select class="select">
+                            <option></option>
+                            <option value="병가">병가</option>
+                            <option value="연차">연차</option>
+                        </select>
+                    </div>
+                    <div class="inputBox">
+                        <label>기간</label>
+                        <select class="select">
+                            <option value="종일">종일</option>
+                            <option value="오전">오전</option>
+                            <option value="오후">오후</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-conBox right">
+                    <div class="leftDate">
+                        <p class="beforeDate">남은 휴가 일수 : <span class="date">10.5</span></p>
+                        <p class="afterDate">신청 이후 남은 휴가 일수 : <span class="date">10.5</p> </span>
+                    </div>
+                </div>
+                <div class="modal-conBox flex mt8">
+                    <div class="textareaBox">
+                        <label>사유</label>
+                        <textarea placeholder="사유를 입력하세요"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-function">
+                <button class="btn sec">취소</button>
+                <button class="btn pri">신청</button>
+            </div>
+        </div>
+    </div>
+    <!-- 모달 영역 -->
+
+     <!-- 모달 영역 -->
+     <div class="modalBox">
+        <div class="modal">
+            <div class="modal-title">
+                <span>휴가를 취소하겠습니까?</span>
+            </div>
+            <div class="modal-function">
+                <button class="btn sec">아니요</button>
+                <button class="btn pri">네</button>
+            </div>
+        </div>
+    </div>
+    <!-- 모달 영역 -->
+
+    <!-- 하단 영역 -->
+    <div class="submit submit-employee">
+        <button class="start">휴가신청</button>
+    </div>
+    <!-- 하단 영역 -->
+</body>
+
+</html>

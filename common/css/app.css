@@ -348,6 +348,93 @@ body::-webkit-scrollbar-track {
   color: var(--b6) !important;
 }
 
+.vacationHeader {
+  font-size: 18px;
+  font-weight: 700;
+}
+.vacationHeader .title::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 12px;
+  margin: 0 12px;
+  border-radius: 2px;
+  background-color: var(--b4);
+}
+.vacationHeader .num {
+  color: var(--m0);
+}
+
+.vacationList .current {
+  margin-bottom: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--b4);
+}
+.vacationList .vacationSec + .vacationSec {
+  margin-top: 16px;
+}
+.vacationList .vacationSec > .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 0 4px;
+}
+.vacationList .vacationSec > .top .state {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  color: var(--b2);
+}
+.vacationList .vacationSec > .top .state .stateBtn {
+  margin-left: 8px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 22px;
+  border-radius: 11px;
+  color: #fff;
+}
+.vacationList .vacationSec > .top .state .stateBtn.wait {
+  background-color: #999999;
+}
+.vacationList .vacationSec > .top .state .stateBtn.pass {
+  background-color: var(--s1);
+}
+.vacationList .vacationSec > .top .state .stateBtn.companion {
+  background-color: var(--s2);
+}
+.vacationList .vacationSec > .top .date {
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 500;
+  color: var(--b3);
+}
+.vacationList .vacationSec .userSec .cancleBtn {
+  padding: 4px 8px;
+  background-color: var(--b3);
+  border-radius: 8px;
+  color: #fff;
+  line-height: 150%;
+}
+
+.modal-conBox.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 12px;
+  text-align: right;
+}
+.modal-conBox.right .leftDate {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--b2);
+}
+.modal-conBox.right .leftDate .date {
+  color: var(--b1);
+}
+
 header {
   width: 100%;
   height: 56px;
@@ -2167,4 +2254,4 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
+}/*# sourceMappingURL=app.css.map */
