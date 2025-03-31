@@ -790,6 +790,7 @@ span.select2-selection__rendered {
   padding: 8px 12px;
   border: 1px solid #D6D9DF;
   border-radius: 8px;
+  resize: none;
 }
 .textareaBox textarea::-webkit-scrollbar {
   width: 12px;
@@ -802,6 +803,12 @@ span.select2-selection__rendered {
 .textareaBox textarea::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.1882352941);
   border-radius: 12px;
+}
+.textareaBox textarea:-moz-read-only {
+  background-color: var(--b5);
+}
+.textareaBox textarea:read-only {
+  background-color: var(--b5);
 }
 .textareaBox .numberedtextarea-line-numbers {
   color: #333 !important;

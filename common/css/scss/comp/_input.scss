@@ -353,7 +353,12 @@ span.select2-selection__rendered{
         padding: 8px 12px;
         border: 1px solid #D6D9DF;
         border-radius: 8px;
+        resize: none;
         @include scroll();
+
+        &:read-only {
+            background-color: var(--b5);
+        }
     }
 
     .numberedtextarea-line-numbers {
