@@ -180,15 +180,15 @@
                             <div class="modal-conBox flex mt8">
                                 <div class="inputBox">
                                     <label>입사일</label>
-                                    <select class="select" id="year"></select>
+                                    <input type="text" id="year" class="inputSelect">
                                 </div>
-                                <div class="inputBox">
+                                <div class="inputBox"> 
                                     <label class="hidden">1</label>
-                                    <select class="select" id="month"></select>
+                                    <input type="text" id="month" class="inputSelect">
                                 </div>
                                 <div class="inputBox">
                                     <label class="hidden">2</label>
-                                    <select class="select" id="day"></select>
+                                    <input type="text" id="day" class="inputSelect">
                                 </div>
                             </div>
                         </div>
@@ -209,36 +209,22 @@
     <!-- 하단 영역 -->
 
     <script>
-        const yearSelect = document.getElementById("year"),
-              monthSelect = document.getElementById("month"),
-              daySelect = document.getElementById("day"),
-              currentYear = new Date().getFullYear();
+        $(document).ready(function () {
 
-        // 공통 함수: 옵션 추가
-        const addOptions = (select, start, end) => {
-            select.innerHTML = [...Array(end - start + 1)].map((_, i) =>
-                `<option value="${start + i}">${start + i}</option>`).join('');
-        };
-
-        // 연도 (100년 전 ~ 현재)
-        addOptions(yearSelect, currentYear - 100, currentYear);
-        // 월 (1~12)
-        addOptions(monthSelect, 1, 12);
-
-        // 일 업데이트 함수
-        const updateDays = () => {
-            const days = new Date(yearSelect.value, monthSelect.value, 0).getDate();
-            addOptions(daySelect, 1, days);
-        };
-
-        // 이벤트 리스너 설정
-        yearSelect.addEventListener("change", updateDays);
-        monthSelect.addEventListener("change", updateDays);
-
-        // 초기값 설정
-        yearSelect.value = currentYear;
-        monthSelect.value = new Date().getMonth() + 1;
-        updateDays();
+            $("#year").AnyPicker(
+            {
+                mode: "datetime",
+                dateTimeFormat: "yyyy"
+            });
+            $("#month").AnyPicker(
+            {   mode: "datetime",
+                dateTimeFormat: "MM"
+            });
+            $("#day").AnyPicker(
+            {   mode: "datetime",
+                dateTimeFormat: "dd"
+            });
+        })
     </script>
 </body>
 </html>

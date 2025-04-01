@@ -21,4 +21,8 @@ document.write(`
     
     <!-- common css -->
     <link rel="stylesheet" href="/common/css/app.css" type="text/css" />
+
+    <!-- AnyPicker -->
+    <link rel="stylesheet" href="/common/plugins/anyPicker/anypicker.min.css" />
+    <script src="/common/plugins/anyPicker/anypicker.min.js"></script>
 `)

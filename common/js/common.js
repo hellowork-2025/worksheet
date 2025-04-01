@@ -893,4 +893,3 @@ function closeModal(param){
     $el = $(param)
     $el.removeClass('on')
 }
-

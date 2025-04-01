@@ -96,5 +96,68 @@
         <button><i class="fa-solid fa-plus"></i> 직원추가</button>
     </div>
     <!-- 하단 영역 -->
+    <script type="text/javascript">
+
+        var oAP1, oAP2;
+        var dStartD, dEndD, sStartD, sEndD;
+
+        dStartD = new Date(2015, 9, 20, 8, 0, 0, 0);
+        dEndD = new Date(2015, 9, 20, 17, 0, 0, 0);
+
+        $(document).ready(function()
+        {
+            $("#starTime").AnyPicker(
+            {
+                mode: "datetime",
+
+                inputDateTimeFormat: "hh:mm AA",
+                dateTimeFormat: "hh:mm AA",
+
+                onInit: function()
+                {
+                    oAP1 = this;
+                    sEndD = oAP1.formatOutputDates(dEndD, "hh:mm AA");
+                    oAP1.setMaximumDate(sEndD);
+                    oAP1.setSelectedDate(dStartD);
+                
+                    console.log("maxValue : " + sEndD);
+                },
+            
+                onSetOutput: function(sOutput, oSelectedValues)
+                {
+                    sStartD = sOutput;
+                    oAP2.setMinimumDate(sStartD);
+                    oAP2.setSelectedDate(sStartD);
+                    console.log("minValue : " + oAP2.setting.minValue);
+                }
+            });
+
+            $("#endTime").AnyPicker(
+            {
+                mode: "datetime",
+
+                inputDateTimeFormat: "hh:mm AA",
+                dateTimeFormat: "hh:mm AA",
+
+                onInit: function()
+                {
+                    oAP2 = this;
+
+                    sStartD = oAP2.formatOutputDates(dStartD);
+                    oAP2.setMinimumDate(sStartD);
+                    oAP2.setSelectedDate(dEndD);
+                    console.log("minValue : " + sStartD);
+                },
+            
+                onSetOutput: function(sOutput, oSelectedValues)
+                {
+                    sEndD = sOutput;
+                    oAP1.setMaximumDate(sEndD);
+                    console.log("maxValue : " + oAP1.setting.maxValue);
+                }
+            });
+        });
+
+    </script>
 </body>
 </html>
