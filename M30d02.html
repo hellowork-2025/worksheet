@@ -49,7 +49,7 @@
         </div>
 
         <!-- 모달 영역 -->
-        <div class="modalBox">
+        <div class="modalBox on" id="M30d02">
             <div class="modal">
                 <div class="modal-title">
                     <span>그룹 추가</span>
@@ -60,9 +60,9 @@
                             <label>그룹명</label>
                             <input type="text" placeholder="그룹명을 입력하세요">
                         </div>
-                        <div class="inputBox">
+                        <div class="inputBox inputButton mt8">
                             <label>근무지 설정</label>
-                            <input type="text" placeholder="좌표를 입력하세요">
+                            <input type="text" placeholder="placeholder"><div class="gps">위치검토</div>
                             <input type="text" placeholder="placeholder">
                         </div>
                     </div>
@@ -82,7 +82,7 @@
                     </script>
                 </div>
                 <div class="modal-function">
-                    <button class="btn sec">취소</button>
+                    <button class="btn sec" onclick="closeModal(M30d02)">취소</button>
                     <button class="btn pri">완료</button>
                 </div>
             </div>

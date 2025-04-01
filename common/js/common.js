@@ -871,4 +871,26 @@ function pwToggle(param){
     }
 }
 
+//모달
+
+function openModal(param){
+    $el = $(param)
+    $el.addClass('on')
+    console.log($el)
+}
+
+// let $close = $('.modal-function sec');
+// $close.click(function(){
+//     $el = $(this)
+//         // // console.log($el)
+//     $modal = $el.parent('.modalBox')
+    
+//     $modal.removeClass('on')
+
+// })
+
+function closeModal(param){
+    $el = $(param)
+    $el.removeClass('on')
+}
 

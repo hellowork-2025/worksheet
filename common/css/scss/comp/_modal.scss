@@ -1,10 +1,16 @@
 .modalBox{
+  display: none;
   position: absolute;
   left: 0;top: 0;
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 900;
+
+
+  &.on{
+    display: block;
+  }
 
   .modal{
     position: absolute;

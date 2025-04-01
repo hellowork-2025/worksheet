@@ -299,6 +299,7 @@ body::-webkit-scrollbar-track {
   line-height: 24px;
   font-weight: 700;
   text-align: center;
+  cursor: pointer;
 }
 .btn.pri {
   background-color: var(--btn1);
@@ -694,6 +695,15 @@ span.select2-selection__rendered {
   position: absolute;
   right: 8px;
   top: 40px;
+}
+.inputBox .gps::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -8px;
+  width: 1px;
+  height: 16px;
+  background-color: var(--btn6);
 }
 .inputBox .mag {
   width: 22px;
@@ -1685,6 +1695,7 @@ input[type=datetime-local]:disabled {
 }
 
 .modalBox {
+  display: none;
   position: absolute;
   left: 0;
   top: 0;
@@ -1692,6 +1703,9 @@ input[type=datetime-local]:disabled {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 900;
+}
+.modalBox.on {
+  display: block;
 }
 .modalBox .modal {
   position: absolute;
@@ -2005,6 +2019,7 @@ body {
   border-radius: 12px;
   font-size: 16px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .tabContainer {
