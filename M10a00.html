@@ -40,4 +40,23 @@
     </div>
 </body>
 
+<script>
+    $(document).ready(function () {
+        function checkInputs() {
+            let idValue = $("input[type='text']").val().trim(); 
+            let pwValue = $("input[type='password']").val().trim(); 
+
+            if (idValue !== "" && pwValue !== "") {
+                $(".enter").addClass("active"); 
+            } else {
+                $(".enter").removeClass("active"); 
+            }
+        }
+        
+        $("input[type='text'], input[type='password']").on("input", checkInputs);
+
+        checkInputs();
+    });
+</script>
+
 </html>

@@ -101,3 +101,8 @@ body {
 .hidden {
     visibility: hidden;
 }
+
+input[type="text"]::-ms-clear,
+input[type="password"]::-ms-reveal {
+	display: none;
+}

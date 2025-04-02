@@ -25,12 +25,9 @@
   color: var(--b6);
   border-radius: 12px;
   cursor: pointer;
-  
   margin-top: 8px;
-
-  &:hover{
-    background-color: var(--btn1);
-    color: var(--b6);
-    transition: .3s;
-  }
+}
+.enter.active {
+  background-color: var(--btn1);
+  cursor: pointer;
 }

@@ -72,27 +72,16 @@ $(document).ready(function () {
 
 //인탭 기능 
 $(document).ready(function () {
+    // 초기 상태 설정: 첫 번째 탭만 활성화
+    $(".tab").removeClass("tab-active");
+    $(".tab[data-id='tab1']").addClass("tab-active");
+
     $(".tab-a").off().click(function () {
         $(".tab").removeClass("tab-active");
         $(".tab[data-id='" + $(this).attr("data-id") + "']").addClass("tab-active");
         $(".tab-a").parent().removeClass("active-a");
         $(this).parent().addClass("active-a");
     });
-
-    $(".tab-a02").off().click(function () {
-        $(".tab02").removeClass("tab-active");
-        $(".tab02[data-id='" + $(this).attr("data-id") + "']").addClass("tab-active");
-        $(".tab-a02").parent().removeClass("active-a");
-        $(this).parent().addClass("active-a");
-    });
-
-    // $(".tab-a03").click(function () {
-    //   $(".tab03").removeClass("tab-active");
-    //   $(".tab03[data-id='" + $(this).attr("data-id") + "']").addClass("tab-active");
-    //   $(".tab-a03").parent().removeClass("active-a");
-    //   $(this).parent().addClass("active-a");
-    // });
-
 });
 
 //select
